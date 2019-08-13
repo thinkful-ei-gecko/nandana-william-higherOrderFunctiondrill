@@ -85,3 +85,18 @@ let eachFilteredMove = mappedMoves.forEach((tm, i = 1) => {
 console.log(filteredMoves);
 console.log(mappedMoves);
 console.log(eachFilteredMove);*/
+
+const input = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
+let newArray = input.split(' ')
+newArray.unshift('');
+let reduceResult = newArray.reduce((total, word) => {
+  if (word.length === 3) {
+    total += ' '; 
+  } else {
+    total += word.slice(-1).toUpperCase();
+  }
+  return total;
+});
+
+
+console.log(reduceResult);
