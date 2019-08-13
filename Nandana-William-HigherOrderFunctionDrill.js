@@ -35,16 +35,14 @@ const myNames = ['Rich', 'Joe', 'Bhaumik', 'Ray'];
 
 // We use your `filter` function here, capturing a new array into `filteredNames`
 // comprised of names that only begin with 'R'
-const filteredNames = filter(myNames, function(name) {
+const filteredNames = filter(myNames, (name) => name[0] === 'R');
   // This is known as a "predicate function" - it's a function that 
   // only returns a boolean
-  return name[0] === 'R';
-});
 
 console.log(filteredNames) // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES*/
 
-function hazardWarningCreator(typeOfWarning){
+/*function hazardWarningCreator(typeOfWarning){
   let warningCounter =0;
   return function(location){
     warningCounter++;
@@ -56,8 +54,6 @@ function hazardWarningCreator(typeOfWarning){
     console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!`);
     }
   };
-
-
 }
 
 const rocksWarning = hazardWarningCreator('Rocks on the Road');
@@ -73,4 +69,19 @@ console.log(rocksWarning2('Main St and Pacific Ave'));
 console.log(rocksWarning2('Main St and Pacific Ave'));
 console.log(rocksWarning3('Centinela Ave and Olympic Blvd'));
 console.log(rocksWarning3('Main St and Pacific Ave'));
-console.log(rocksWarning3('Main St and Pacific Ave'));
+console.log(rocksWarning3('Main St and Pacific Ave'));*/
+
+/*function turtleMovement(array) {
+  return array.filter(filterFunction);
+}
+
+const turtleMoves = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+let filteredMoves = turtleMoves.filter(tm => tm[0] >= 0 && tm[1] >= 0);
+let mappedMoves = filteredMoves.map(tm => tm[0] + tm[1]);
+let eachFilteredMove = mappedMoves.forEach((tm, i = 1) => {
+  console.log(`Movement #${i++}: ${tm}`);
+});
+
+console.log(filteredMoves);
+console.log(mappedMoves);
+console.log(eachFilteredMove);*/
